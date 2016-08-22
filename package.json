@@ -33,6 +33,9 @@
     "shelljs": "^0.7.0",
     "yargs": "^4.7.0",
     "gulp-babel": "^6.1.2",
-    "gulp-gh-pages": "^0.5.2"
+    "gulp-gh-pages": "^0.5.2",
+    "main-bower-files": "^2.13.1"
+  },
+  "dependencies": {
   }
 }

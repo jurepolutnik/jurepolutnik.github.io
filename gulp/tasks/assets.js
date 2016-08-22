@@ -16,6 +16,7 @@ const size = require('gulp-size');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const when = require('gulp-if');
+const mainBowerFiles = require('main-bower-files');
 
 // 'gulp scripts' -- creates a index.js file from your JavaScript files and
 // creates a Sourcemap for it
@@ -85,6 +86,47 @@ gulp.task('styles', () =>
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
     .pipe(when(!argv.prod, browserSync.stream()))
 );
+
+gulp.task('scripts:vendor', () =>
+  gulp.src([
+    'src/assets/theme/fonts/map-icons/js/map-icons.min.js',
+    'src/assets/theme/js/plugins/jquery.mousewheel-3.0.6.pack.js',
+    'src/assets/theme/js/plugins/imagesloaded.pkgd.min.js',
+    'src/assets/theme/js/plugins/isotope.pkgd.min.js',
+    'src/assets/theme/js/plugins/jquery.appear.min.js',
+    'src/assets/theme/js/plugins/jquery.bxslider/jquery.bxslider.min.js',
+    'src/assets/theme/js/plugins/jquery.customscroll/jquery.mCustomScrollbar.concat.min.js',
+    'src/assets/theme/js/plugins/jquery.mediaelement/mediaelement-and-player.min.js',
+    'src/assets/theme/js/plugins/jquery.fancybox/jquery.fancybox.pack.js',
+    'src/assets/theme/js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.js',
+    'src/assets/theme/js/plugins/jquery.owlcarousel/owl.carousel.min.js',
+    'src/assets/theme/js/site.js',
+  ])
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('.tmp/assets/javascript'))
+);
+
+gulp.task('styles:vendor', () =>
+  gulp.src([
+    'src/assets/theme/fonts/map-icons/css/map-icons.min.css',
+    'src/assets/theme/fonts/icomoon/style.css',
+    'src/assets/theme/js/plugins/jquery.bxslider/jquery.bxslider.css',
+    'src/assets/theme/js/plugins/jquery.customscroll/jquery.mCustomScrollbar.min.css',
+    'src/assets/theme/js/plugins/jquery.mediaelement/mediaelementplayer.min.css',
+    'src/assets/theme/js/plugins/jquery.fancybox/jquery.fancybox.css',
+    'src/assets/theme/js/plugins/jquery.owlcarousel/owl.carousel.css',
+    'src/assets/theme/js/plugins/jquery.owlcarousel/owl.theme.css',
+    'src/assets/theme/style.css',
+    'src/assets/theme/colors/green.css',
+  ])
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('.tmp/assets/stylesheets'))
+);
+
+// gulp.task('vendor', () =>
+//   gulp.src(mainBowerFiles())
+//     .pipe(gulp.dest('.tmp/assets/vendor'))
+// );
 
 // Function to properly reload your browser
 function reload(done) {

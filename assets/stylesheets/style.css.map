@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;;EAEE","file":"style.css","sourcesContent":["/*\nThe main SCSS file for everything, yep\n*/\n\n// @import \"main\";\n// @import \"base\";\n// @import \"layout\";\n// @import \"syntax-highlighting\";\n"],"sourceRoot":"/source/"}

@@ -117,7 +117,7 @@ gulp.task('styles:vendor', () =>
     'src/assets/theme/js/plugins/jquery.owlcarousel/owl.carousel.css',
     'src/assets/theme/js/plugins/jquery.owlcarousel/owl.theme.css',
     'src/assets/theme/style.css',
-    'src/assets/theme/colors/green.css',
+    'src/assets/theme/colors/*.css',
   ])
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))

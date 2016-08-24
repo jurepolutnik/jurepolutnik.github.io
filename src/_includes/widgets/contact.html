@@ -1,0 +1,61 @@
+<section id="contact" class="section section-contact">
+  <div class="animate-up">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="section-box contact-form">
+          <h3>Feel free to contact me</h3>
+
+          <form class="contactForm" action="https://formkeep.com/f/ea5742d9b90e" method="post">
+            <input type="hidden" name="utf8" value="✓">
+            <div class="input-field">
+              <input class="contact-name" type="text" name="full_name"/>
+              <span class="line"></span>
+              <label>Full Name</label>
+            </div>
+
+            <div class="input-field">
+              <input class="contact-email" type="email" name="email"/>
+              <span class="line"></span>
+              <label>Email</label>
+            </div>
+
+            <div class="input-field">
+              <input class="contact-subject" type="text" name="subject"/>
+              <span class="line"></span>
+              <label>Subject</label>
+            </div>
+
+            <div class="input-field">
+              <textarea class="contact-message" rows="4" name="message"></textarea>
+              <span class="line"></span>
+              <label>Message</label>
+            </div>
+
+            <span class="btn-outer btn-primary-outer ripple">
+              <input class="contact-submit btn btn-lg btn-primary" type="submit" value="Send"/>
+            </span>
+
+            <div class="contact-response"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="section-box contact-map">
+          <dl class="contact-info">
+            <dt>ADDRESS</dt>
+            <dd>{{site.address}}</dd>
+            <dt>skype</dt>
+            <dd>{{site.skype}}</dd>
+            <dt>E-mail</dt>
+            <dd><a href="mailto:{{site.email}}">{{site.email}}</a></dd>
+          </dl>
+
+          <div id="map" data-latitude="{{site.latitude}}" data-longitude="{{site.longitude}}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- #contact -->

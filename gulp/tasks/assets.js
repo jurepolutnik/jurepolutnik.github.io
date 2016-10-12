@@ -123,6 +123,12 @@ gulp.task('styles:vendor', () =>
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
 );
 
+gulp.task('docs', () =>
+  gulp.src('src/assets/docs/*')
+    .pipe(gulp.dest('.tmp/assets/docs'))
+    .pipe(size({title: 'docs'}))
+);
+
 // Function to properly reload your browser
 function reload(done) {
   browserSync.reload();

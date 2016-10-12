@@ -123,11 +123,6 @@ gulp.task('styles:vendor', () =>
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
 );
 
-// gulp.task('vendor', () =>
-//   gulp.src(mainBowerFiles())
-//     .pipe(gulp.dest('.tmp/assets/vendor'))
-// );
-
 // Function to properly reload your browser
 function reload(done) {
   browserSync.reload();

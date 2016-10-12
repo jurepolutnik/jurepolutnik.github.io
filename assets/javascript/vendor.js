@@ -864,17 +864,19 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
         var latlng;
         var lat = 44.5403;
         var lng = -78.5463;
+        var zoom = 14;
         var map = $('#map');
         var mapCanvas = map.get(0);
 
         if (map.data("latitude")) lat = map.data("latitude");
         if (map.data("longitude")) lng = map.data("longitude");
+        if (map.data("zoom")) zoom = map.data("zoom");
 
         latlng = new google.maps.LatLng(lat, lng);
 
         // Map Options
         var mapOptions = {
-            zoom: 14,
+            zoom: zoom,
             center: latlng,
             scrollwheel: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -1556,10 +1558,10 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 			}
 
 			if( !errors ) {
-				$.post("https://formkeep.com/f/ea5742d9b90e",
+				$.post("https://formspree.io/jure.polutnik@gmail.com",
 					contact_form.serialize(),
 					function(response) {
-					   contact_form_response.html(response);
+					  //  contact_form_response.html(response);
 					}
 				);
 			}

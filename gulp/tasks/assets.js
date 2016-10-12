@@ -109,7 +109,7 @@ gulp.task('scripts:vendor', () =>
 gulp.task('styles:vendor', () =>
   gulp.src([
     'src/assets/theme/fonts/map-icons/css/map-icons.min.css',
-    'src/assets/theme/fonts/icomoon/style.css',
+    'src/assets/theme/fonts/icomoon/css/style.css',
     'src/assets/theme/js/plugins/jquery.bxslider/jquery.bxslider.css',
     'src/assets/theme/js/plugins/jquery.customscroll/jquery.mCustomScrollbar.min.css',
     'src/assets/theme/js/plugins/jquery.mediaelement/mediaelementplayer.min.css',

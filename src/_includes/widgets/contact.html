@@ -7,7 +7,7 @@
         <div class="section-box contact-form">
           <h3>Feel free to contact me</h3>
 
-          <form class="contactForm" action="https://formkeep.com/f/ea5742d9b90e" method="post">
+          <form class="contactForm" action="https://formspree.io/{{site.author.email}}" method="post">
             <input type="hidden" name="utf8" value="✓">
             <div class="input-field">
               <input class="contact-name" type="text" name="full_name"/>
@@ -53,7 +53,7 @@
             <dd><a href="mailto:{{site.email}}">{{site.email}}</a></dd>
           </dl>
 
-          <div id="map" data-latitude="{{site.latitude}}" data-longitude="{{site.longitude}}"></div>
+          <div id="map" data-latitude="{{site.latitude}}" data-longitude="{{site.longitude}}" data-zoom="12"></div>
         </div>
       </div>
     </div>

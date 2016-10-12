@@ -1,8 +1,15 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: vcard
-description: vcard
+title: Jure Polutnik
+description: My professional web page
 url: http://jurepolutnik.github.io/
+
+address: Ljubljana, Slovenia
+skype: jurepolutnik
+email: jure.polutnik@gmail.com
+
+latitude: 46.055556
+longitude: 14.508333
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -15,7 +22,7 @@ exclude: ['assets']
 author:
   name: Jure Polutnik
   email: jure.polutnik@gmail.com
-  uri: 
+  uri:
   bio: Software engineer
   twitter:
   github:
